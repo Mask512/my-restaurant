@@ -32,6 +32,8 @@ a {
 a,
 button {
     min-width: 44px;
+    min-height: 44px;
+    line-height: 44px;
     padding: 0 1rem;
     cursor: pointer;
     text-decoration: none;

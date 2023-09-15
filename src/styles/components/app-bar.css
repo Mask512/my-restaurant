@@ -1,7 +1,6 @@
 app-bar {
     grid-column: 2 / 3;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     color: var(--clr-text);
 }
@@ -32,7 +31,7 @@ app-bar {
 
 .menu-close {
     position: absolute;
-    top: 2rem;  
+    top: 1rem;  
     right: 2rem;
 }
 
@@ -41,7 +40,6 @@ app-bar {
     color: white;
     font-family: 'Raleway', sans-serif;
 }
-
 
 .nav-item a:is(:hover, :focus) {
     color: var(--clr-accent);
