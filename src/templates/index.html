@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  
-  <title>Restaurant Apps Starter Project</title>
-</head>
-<body>
-  <h1>Restaurant Apps Starter Project</h1>
-  <p>Hallo coders! Anda berhasil menjalankan starter project.</p>
-  <p>Jangan lupa untuk menggunakan salah satu gambar yang berada pada ./images/heros sebagai background hero elemen</p>
-  <img src="./images/heros/hero-image_1.jpg" width="450" alt="">
-  <img src="./images/heros/hero-image_2.jpg" width="450" alt="">
-  <img src="./images/heros/hero-image_3.jpg" width="450" alt="">
-  <img src="./images/heros/hero-image_4.jpg" width="450" alt="">
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Restaurant</title>
+  </head>
+  <body>
+    <a class="skip-to-content" href="#">Skip to Content</a>
+    <header>
+      <app-bar></app-bar>
+    </header>
+    <hero-bar></hero-bar>
+
+    <main id="main-content">
+      <section id="explore-restaurant">
+        <h2 class="explore-restaurant-title cursive-text">
+          Explore Our Restaurants
+        </h2>
+
+        <restaurant-list> </restaurant-list>
+      </section>
+    </main>
+
+    <footer-element></footer-element>
+  </body>
 </html>

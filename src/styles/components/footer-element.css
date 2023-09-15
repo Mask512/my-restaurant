@@ -1,0 +1,7 @@
+footer-element {
+    grid-column: 1 / -1;
+    text-align: center;
+    background-color: var(--clr-primary);
+    color: var(--clr-text);
+    line-height: 2.5rem;
+  }

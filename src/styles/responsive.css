@@ -1,0 +1,25 @@
+@media screen and (min-width:800px) {
+    .nav-list {
+        all: initial;
+        display: flex;
+    }
+
+    .nav-item a{
+        font-size: 1.5rem;
+    }
+
+    .menu-close,
+    .menu-open {
+        display: none;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    h2 {
+        font-size: 3rem;
+    }
+}

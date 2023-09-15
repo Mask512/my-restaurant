@@ -1,0 +1,23 @@
+hero-bar {
+    grid-column: 1 / -1;
+    margin: 0 auto;
+    background-image: linear-gradient(rgba(0, 66, 37, 0.2), rgba(0, 66, 37, 0.1)) , url('../../public/images/heros/hero-image_4.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-top: calc(0px - var(--gap));
+    height: min(40vh, 400px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--clr-text);
+    text-shadow: 1px 1px 1px var(--clr-primary);
+  }
+  
+  .hero-text {
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap);
+  }

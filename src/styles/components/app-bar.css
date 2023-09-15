@@ -1,0 +1,49 @@
+app-bar {
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--clr-text);
+}
+
+.nav-list {
+    position: fixed;
+    height: 100%;;
+    width: 0;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    overflow-x: hidden;
+    transition: 0.5s;
+    background-color: var(--clr-primary);
+}
+
+.brand {
+    flex-grow: 1;
+}
+
+.nav-list.open {
+    width: 100%;
+}
+
+.menu-close {
+    position: absolute;
+    top: 2rem;  
+    right: 2rem;
+}
+
+.nav-item a{
+    font-size: 2rem;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+.nav-item a:is(:hover, :focus) {
+    color: var(--clr-accent);
+    text-decoration: underline  ;
+}
