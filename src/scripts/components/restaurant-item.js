@@ -9,10 +9,12 @@ class RestaurantItem extends HTMLElement {
   }
 
   render() {
-    const { id, name, description, city, pictureId, rating } = this.restaurant;
+    const {
+      id, name, description, city, pictureId, rating,
+    } = this.restaurant;
     let descriptionText = description;
-    if(description.length > 200) {
-      descriptionText = description.slice(0, 197) + "....";
+    if (description.length > 200) {
+      descriptionText = `${description.slice(0, 197)}....`;
     }
     this.innerHTML = `
     <article tabIndex="0" class="restaurant-info card" id="${id}">

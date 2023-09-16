@@ -5,12 +5,13 @@ class RestaurantList extends HTMLElement {
     this._restaurants = data;
     this.render();
   }
+
   get restaurants() {
     return this._restaurants;
   }
 
   render() {
-    this.innerHTML = "";
+    this.innerHTML = '';
     this.restaurants.forEach((restaurant) => {
       const restaurantItem = document.createElement('restaurant-item');
       restaurantItem.restaurant = restaurant;

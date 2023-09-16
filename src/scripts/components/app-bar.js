@@ -21,8 +21,8 @@ class AppBar extends HTMLElement {
     const menuClose = document.querySelector('.menu-close');
     const menuOpen = document.querySelector('.menu-open');
     const navList = document.querySelector('.nav-list');
-    this.toggleMenu(menuClose,navList);
-    this.toggleMenu(menuOpen,navList);
+    this.toggleMenu(menuClose, navList);
+    this.toggleMenu(menuOpen, navList);
   }
 
   toggleMenu(menu, navlist) {

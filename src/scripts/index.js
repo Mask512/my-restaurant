@@ -1,8 +1,8 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.scss';
-import '../scripts/components/app-bar';
-import '../scripts/components/hero-bar';
-import '../scripts/components/footer-element';
+import './components/app-bar';
+import './components/hero-bar';
+import './components/footer-element';
 import main from './main';
 
-document.addEventListener("DOMContentLoaded", main);
+document.addEventListener('DOMContentLoaded', main);
