@@ -7,8 +7,13 @@ module.exports = merge(common, {
   mode: 'development',
   output: {
     path: path.resolve(__dirname, 'dev'),
-    filename: 'dev[name].js',
+    filename: 'main.js',
   },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'main.css',
+    }),
+  ],
   devServer: {
     port: 9000,
     client: {

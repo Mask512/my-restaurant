@@ -1,0 +1,8 @@
+@use '../variables';
+
+footer-element {
+    text-align: center;
+    background-color: variables.$clr-primary;
+    color: variables.$clr-text;
+    line-height: 2.5rem;
+}

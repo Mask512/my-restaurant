@@ -1,5 +1,5 @@
 import 'regenerator-runtime'; /* for async await transpile */
-import '../styles/main.css';
+import '../styles/main.scss';
 import '../scripts/components/app-bar';
 import '../scripts/components/hero-bar';
 import '../scripts/components/footer-element';

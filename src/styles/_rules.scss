@@ -1,0 +1,57 @@
+@use 'variables';
+
+body {
+  font-family: variables.$font-Raleway;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+a,
+button {
+  min-width: 44px;
+  min-height: 44px;
+  line-height: 44px;
+  padding: 0 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: variables.$clr-text;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+a,
+button {
+  &:focus,
+  &:hover {
+    outline: 2px solid variables.$clr-accent;
+  }
+}
+
+.cursive-text {
+  font-family: variables.$font-Pacifico;
+}
+
+.card {
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid variables.$clr-border;
+}
+
+@media screen and (min-width: variables.$medium-screen) {
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: variables.$large-screen) {
+  h2 {
+    font-size: 3rem;
+  }
+}

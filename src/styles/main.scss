@@ -1,0 +1,48 @@
+@use "resets";
+@use "variables";
+@use "rules";
+@use "layouts";
+@use "./components/app-bar";
+@use "./components/hero-bar";
+@use "./components/restaurant-item";
+@use "./components/footer-element";
+
+@import 'material-icons/iconfont/filled.css';
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@400;500;800&display=swap');
+
+.skip-to-content {
+    display: inline-block;
+    padding: 1rem;
+    line-height: 2rem;
+    position: absolute;
+    top: -100px;
+    background-color: variables.$clr-primary;
+    color: variables.$clr-text;
+
+    &:focus {
+        top: 0;
+    }
+}
+
+body {
+    font-size: variables.$fs-base;
+    background-color: variables.$clr-bg;
+}
+
+header {
+    background-color: variables.$clr-primary;
+}
+
+.explore-restaurant-title {
+    text-align: center;
+    color: variables.$clr-primary;
+    text-decoration: underline;
+    margin-bottom: variables.$gap;
+}
+
+
+
+
+
+
+  

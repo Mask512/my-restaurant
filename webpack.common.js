@@ -8,16 +8,20 @@ module.exports = {
     app: path.resolve(__dirname, 'src/scripts/index.js'),
   },
   output: {
-    filename: '[name].bundle.js',
+    filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
-    assetModuleFilename: 'assets/[name][hash][ext]',
+    assetModuleFilename: 'assets/[name][contenthash][ext]',
     clean: true,
   },
   module: {
     rules: [
       {
-        test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        test: /\.s[ac]ss$/i,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader'
+        ],
       },
       {
         test: /\.(png|jpe?g|ico|gif|svg)$/i,
@@ -29,9 +33,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: path.resolve(__dirname, 'src/templates/index.html'),
-    }),
-    new MiniCssExtractPlugin({
-      filename: 'main.[contenthash].css',
     }),
     new CopyWebpackPlugin({
       patterns: [
