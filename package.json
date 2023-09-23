@@ -42,6 +42,7 @@
     "whatwg-fetch": "^3.6.2"
   },
   "dependencies": {
+    "focus-trap": "^7.5.2",
     "material-icons": "^1.13.11",
     "regenerator-runtime": "^0.13.9"
   }

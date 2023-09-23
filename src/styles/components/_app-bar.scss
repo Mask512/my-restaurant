@@ -29,6 +29,8 @@ app-bar {
       font-size: 2rem;
       color: white;
       font-family: variables.$font-Raleway;
+      transition: 0.8s ease-out;
+      transform: translateX(-200px);
 
       &:hover,
       &:focus {
@@ -39,6 +41,10 @@ app-bar {
 
     &.open {
       width: 100%;
+
+      .nav-item a {
+        transform: translateX(0);
+      }
     }
 
     .menu-close {
@@ -52,9 +58,11 @@ app-bar {
     .nav-list {
       all: initial;
       display: flex;
+      justify-items: flex-end;
 
       .nav-item a {
         font-size: 1.5rem;
+        transform: translateX(0);
       }
     }
 
