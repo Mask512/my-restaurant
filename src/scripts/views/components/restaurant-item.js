@@ -26,7 +26,7 @@ class RestaurantItem extends HTMLElement {
             srcset="${CONFIG.BASE_IMAGE_URL}small/${pictureId}"
             media="(max-width: 801px)"
           />
-          <img src="${CONFIG.BASE_IMAGE_URL}medium/${pictureId}"
+          <img src="${CONFIG.BASE_IMAGE_URL}medium/${pictureId}" loading="lazy"
           alt="Photo of ${name}">
         </picture>
       </div>

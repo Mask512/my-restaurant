@@ -7,12 +7,12 @@ class App {
   constructor({
     menuOpen,
     menuClose,
-    navList,
+    navContainer,
     mainContent,
   }) {
     this._menuOpen = menuOpen;
     this._menuClose = menuClose;
-    this._navList = navList;
+    this._navContainer = navContainer;
     this._mainContent = mainContent;
 
     this._initMenu();
@@ -23,14 +23,14 @@ class App {
     DrawerInitiator.init({
       menuOpen: this._menuOpen,
       menuClose: this._menuClose,
-      navList: this._navList,
+      navContainer: this._navContainer,
       mainContent: this._mainContent,
     });
   }
 
   _initFocusTrap() {
     focusTrapInitiator({
-      container: this._navList,
+      container: this._navContainer,
       openBtn: this._menuOpen,
       closeBtn: this._menuClose,
     });

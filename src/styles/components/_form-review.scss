@@ -4,8 +4,8 @@
   margin-top: 1rem;
   background-color: variables.$clr-bg;
   padding: variables.$gap;
-  border-top: 5px solid variables.$clr-accent;
-  border-bottom: 5px solid variables.$clr-accent;
+  border-left: 5px solid variables.$clr-accent;
+  border-right: 5px solid variables.$clr-accent;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -27,13 +27,14 @@
     width: 100%;
     padding: 0.5rem;
     margin-bottom: variables.$gap-half;
-    border: 1px solid variables.$clr-border;
-    border-radius: 4px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid variables.$clr-accent;
+    border-radius: 5px;
     font-size: 1rem;
 
     &:focus {
-      outline: none;
-      border-color: variables.$clr-accent;
+      border-color: variables.$clr-border;
     }
   }
 
@@ -43,6 +44,7 @@
 
   button {
     background-color: variables.$clr-primary;
+    width: 100px;
     color: white;
     border: none;
     border-radius: 4px;
@@ -50,8 +52,9 @@
     font-size: 1rem;
     transition: background-color 0.3s ease;
 
-    &:hover {
-      background-color: darken(variables.$clr-primary, 10%);
+    &:hover,
+    &:focus {
+      background-color: lighten(variables.$clr-primary, 10%);
     }
   }
 }

@@ -2,30 +2,30 @@ const DrawerInitiator = {
   init({
     menuOpen,
     menuClose,
-    navList,
+    navContainer,
     mainContent,
   }) {
     menuOpen.addEventListener('click', (event) => {
-      this._openDrawer(event, navList);
+      this._openDrawer(event, navContainer);
     });
 
     menuClose.addEventListener('click', (event) => {
-      this._closeDrawer(event, navList);
+      this._closeDrawer(event, navContainer);
     });
 
     mainContent.addEventListener('click', (event) => {
-      this._closeDrawer(event, navList);
+      this._closeDrawer(event, navContainer);
     });
   },
 
-  _openDrawer(event, navlist) {
+  _openDrawer(event, navContainer) {
     event.stopPropagation();
-    navlist.classList.add('open');
+    navContainer.classList.add('open');
   },
 
-  _closeDrawer(event, navlist) {
+  _closeDrawer(event, navContainer) {
     event.stopPropagation();
-    navlist.classList.remove('open');
+    navContainer.classList.remove('open');
   },
 };
 

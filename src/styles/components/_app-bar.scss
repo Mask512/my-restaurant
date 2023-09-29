@@ -10,26 +10,36 @@ app-bar {
     flex-grow: 1;
   }
 
-  .nav-list {
+  .nav-container {
     position: fixed;
     height: 100%;
     width: 0;
     z-index: 1;
     top: 0;
     left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    overflow-x: hidden;
-    transition: 0.5s;
+    transition: 0.3s;
     background-color: variables.$clr-primary;
+
+    .menu-close {
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
+    }
+
+    .nav-list {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      overflow-x: hidden;
+    }
 
     .nav-item a {
       font-size: 2rem;
       color: white;
       font-family: variables.$font-Raleway;
-      transition: 0.8s ease-out;
+      transition: 0.5s ease-out;
       transform: translateX(-200px);
 
       &:hover,
@@ -46,24 +56,34 @@ app-bar {
         transform: translateX(0);
       }
     }
-
-    .menu-close {
-      position: absolute;
-      top: 1rem;
-      right: 2rem;
-    }
   }
 
   @media screen and (min-width: variables.$medium-screen) {
-    .nav-list {
-      all: initial;
-      display: flex;
-      justify-items: flex-end;
 
-      .nav-item a {
-        font-size: 1.5rem;
-        transform: translateX(0);
+    .nav-container {
+      position: unset;
+      width: unset;
+
+      &.open {
+        width: unset;
       }
+          
+      .nav-list {
+        display: flex;
+        padding: .5em;
+        flex-direction: unset;
+        justify-items: flex-end;
+        z-index: 2;
+
+        .nav-item {
+          display: inline-block;
+        }
+
+        .nav-item a {
+          font-size: 1.5rem;
+          transform: translateX(0);
+        }
+      } 
     }
 
     .menu-close,

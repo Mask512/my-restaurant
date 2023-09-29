@@ -7,20 +7,22 @@ import App from './views/app';
 
 const menuOpen = document.querySelector('.menu-open');
 const menuClose = document.querySelector('.menu-close');
-const navList = document.querySelector('.nav-list');
+const navContainer = document.querySelector('.nav-container');
 const mainContent = document.querySelector('#main-content');
 
 const app = new App({
   menuOpen,
   menuClose,
-  navList,
+  navContainer,
   mainContent,
 });
 
 window.addEventListener('hashchange', () => {
   app.renderPage();
+  mainContent.scrollIntoView();
 });
 
 window.addEventListener('load', () => {
   app.renderPage();
+  mainContent.scrollIntoView();
 });

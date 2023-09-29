@@ -3,11 +3,6 @@ import { createReviewCard } from '../templates/template-creator';
 import './form-review';
 
 class RestaurantDetail extends HTMLElement {
-  connectedCallback() {
-    this.render();
-    this.formListen();
-  }
-
   set data(restaurant) {
     this._restaurant = restaurant;
     this.render();
@@ -40,7 +35,7 @@ class RestaurantDetail extends HTMLElement {
         <div class="detail-image-wrapper">
             <picture>
                 <source srcset="${CONFIG.BASE_IMAGE_URL}small/${pictureId}" media="(max-width: 801px)"/>
-                <img src="${CONFIG.BASE_IMAGE_URL}medium/${pictureId}"
+                <img src="${CONFIG.BASE_IMAGE_URL}medium/${pictureId}" loading="lazy"
                 alt="Photo of ${name}">
             </picture>
             <p class="text-bold detail-rating">Ratings : ${rating}</p>
