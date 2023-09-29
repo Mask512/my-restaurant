@@ -7,11 +7,12 @@
     "start-dev": "webpack serve --config webpack.dev.js",
     "dev": "webpack --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
+    "serve": "http-server dist --port 9000",
     "lint": "eslint ./src/scripts --fix",
     "test": "karma start"
   },
   "keywords": [],
-  "author": "your_name <your.email@domain.com>",
+  "author": "Dhimas SP",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.18.5",
@@ -44,6 +45,7 @@
   "dependencies": {
     "focus-trap": "^7.5.2",
     "material-icons": "^1.13.11",
-    "regenerator-runtime": "^0.13.9"
+    "regenerator-runtime": "^0.13.9",
+    "sweetalert2": "^11.7.31"
   }
 }

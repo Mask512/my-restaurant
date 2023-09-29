@@ -5,10 +5,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = merge(common, {
   mode: 'development',
-  output: {
-    path: path.resolve(__dirname, 'dev'),
-    filename: 'main.js',
-  },
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'main.css',

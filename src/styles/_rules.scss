@@ -34,8 +34,16 @@ button {
   }
 }
 
-.cursive-text {
+.text-cursive {
   font-family: variables.$font-Pacifico;
+}
+
+.text-bold {
+  font-weight: 800;
+}
+
+.text-italic {
+  font-style: italic;
 }
 
 .card {

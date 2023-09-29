@@ -1,9 +1,9 @@
-import createContainer from '../templates/content-container';
+import { createContainer, createLoading } from '../templates/template-creator';
 
 const Favorite = {
   async render() {
     const title = 'My Favorites';
-    return createContainer(title);
+    return createContainer(title) + createLoading();
   },
 
   async afterRender() {

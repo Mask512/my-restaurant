@@ -1,0 +1,36 @@
+@use '../variables';
+
+.review-card {
+    border-left: 5px solid variables.$clr-accent;
+    padding: .5em;
+    background-color: variables.$clr-text;
+    
+    blockquote {
+        color: variables.$clr-primary;
+        text-align: center;
+        padding: .5em;
+
+        &::before,
+        &::after {
+            content: '"';
+            padding-inline: 1px;
+        }
+    }
+
+    .review-card-data {
+        margin-left: auto;
+        text-align: right;
+    }
+
+    time,
+    cite {
+        font-size: .8em;
+    }
+
+    cite:before {
+        content: '- ';
+    }
+    time:before{
+        content: ", ";
+    }
+}

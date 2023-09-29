@@ -1,46 +1,60 @@
 @use '../variables';
 
 .restaurant-info {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: variables.$gap-half;
-    color: variables.$clr-primary;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: variables.$gap-half;
+  color: variables.$clr-primary;
 }
 
 .restaurant-image-wrapper {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
 }
 
-.restaurant-image {
-    width: 100%;
-    cursor: pointer;
-    transition: transform .5s;
+.restaurant-image img{
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.5s;
+  object-fit: cover;
 
-    &:hover {
-        transform: scale(1.3);
-    }
+  &:hover {
+    transform: scale(1.3);
+  }
 }
 
 .restaurant-details {
-    display: flex;
-    justify-content: space-between;
-    padding-inline: 1rem;
-    font-weight: 500;
-}
-
-.rating,
-.city {
-    font-weight: 800;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 1rem;
+  font-weight: 500;
 }
 
 .restaurant-name {
-    text-align: center;
-    text-transform: uppercase;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .restaurant-desc {
-    padding: 0 1rem 1rem;
+  font-size: 0.8em;
+  padding: 0 1rem;
+  max-height: 11ch;
+
+  &:after {
+    content: '...';
+  }
+}
+
+.btn-detail {
+  background-color: variables.$clr-primary;
+  color: variables.$clr-accent;
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    color: white;
+    outline: none;
+  }
 }
