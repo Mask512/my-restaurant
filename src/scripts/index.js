@@ -4,6 +4,7 @@ import './views/components/app-bar';
 import './views/components/hero-bar';
 import './views/components/footer-element';
 import App from './views/app';
+import swRegister from './utils/sw-register';
 
 const menuOpen = document.querySelector('.menu-open');
 const menuClose = document.querySelector('.menu-close');
@@ -24,5 +25,6 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
+  swRegister();
   mainContent.scrollIntoView();
 });

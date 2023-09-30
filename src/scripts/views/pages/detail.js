@@ -30,8 +30,9 @@ const Detail = {
         loading.remove();
       }
     } catch (error) {
-      loading.remove();
+      title.textContent = 'Something Error';
       showAlertError(error);
+      loading.remove();
     }
   },
 };

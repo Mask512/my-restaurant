@@ -1,7 +1,8 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "node": true
   },
   "extends": "airbnb-base",
   "overrides": [],
@@ -13,7 +14,8 @@
     "no-underscore-dangle": "off",
     "class-methods-use-this": "off",
     "no-console": "off",
-    "no-plusplus": "off"
+    "no-plusplus": "off",
+    "no-restricted-globals": "off"
   },
   "ignorePatterns": ["webpack*", "dist/**"]
 }
