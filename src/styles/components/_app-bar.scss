@@ -5,6 +5,7 @@ app-bar {
   display: flex;
   align-items: center;
   color: variables.$clr-text;
+  height: 72px;
 
   .brand {
     flex-grow: 1;

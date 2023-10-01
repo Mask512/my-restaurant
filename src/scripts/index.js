@@ -5,11 +5,13 @@ import './views/components/hero-bar';
 import './views/components/footer-element';
 import App from './views/app';
 import swRegister from './utils/sw-register';
+import skipInitiator from './utils/skip-link-initiator';
 
 const menuOpen = document.querySelector('.menu-open');
 const menuClose = document.querySelector('.menu-close');
 const navContainer = document.querySelector('.nav-container');
 const mainContent = document.querySelector('#main-content');
+const skipButton = document.querySelector('.skip-to-content');
 
 const app = new App({
   menuOpen,
@@ -21,6 +23,7 @@ const app = new App({
 window.addEventListener('hashchange', () => {
   app.renderPage();
   mainContent.scrollIntoView();
+  skipInitiator.init(skipButton, 'main-content');
 });
 
 window.addEventListener('load', () => {

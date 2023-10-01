@@ -21,6 +21,11 @@ button {
   color: variables.$clr-text;
 }
 
+input {
+  min-width: 44px;
+  min-height: 44px;
+}
+
 button {
   border: none;
   border-radius: 5px;

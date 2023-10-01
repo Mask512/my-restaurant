@@ -10,7 +10,6 @@ body {
 }
 
 header {
-  height: 72px;
   grid-column: 1 / -1;
   width: 100%;
   display: grid;
@@ -20,7 +19,6 @@ header {
 hero-bar {
   grid-column: 1 / -1;
   margin: 0 auto;
-  margin-top: calc(0px - variables.$gap);
   width: 100%;
   height: min(40vh, 400px);
 }
