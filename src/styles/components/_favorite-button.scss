@@ -1,0 +1,28 @@
+@use '../variables';
+
+favorite-button {
+  #likeButton {
+    background-color: variables.$clr-primary;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  .loading::after {
+    content: '...';
+    animation: loadings 1.5s infinite linear;
+  }
+
+  @keyframes loadings {
+    0% {
+      content: '.';
+    }
+    33% {
+      content: '..';
+    }
+    66% {
+      content: '...';
+    }
+  }
+}

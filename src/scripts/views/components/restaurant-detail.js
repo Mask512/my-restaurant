@@ -1,6 +1,7 @@
 import CONFIG from '../../global/config';
 import { createReviewCard } from '../templates/template-creator';
 import './form-review';
+import './favorite-button';
 
 class RestaurantDetail extends HTMLElement {
   set data(restaurant) {
@@ -30,6 +31,7 @@ class RestaurantDetail extends HTMLElement {
     const categoryList = this._getCategory(categories);
     const menuElement = this._getMenus(menus);
     const reviewsElement = this._getReviews(customerReviews);
+
     this.innerHTML = `
     <article tabIndex="0" class="restaurant-detail" id="${id}">
         <div class="detail-image-wrapper">
@@ -41,6 +43,7 @@ class RestaurantDetail extends HTMLElement {
             <p class="text-bold detail-rating">Ratings : ${rating}</p>
         </div>
         <div class="detail-info">
+            <favorite-button></favorite-button>
             <div class="info-item">
                 <p><span class="text-bold">City: </span><span class="text-italic">${city}</span></p>
             </div>
@@ -64,6 +67,9 @@ class RestaurantDetail extends HTMLElement {
     </article>
     <form-review data-id="${id}"></form-review>
     `;
+
+    const favoriteButton = this.querySelector('favorite-button');
+    favoriteButton.data = this.data;
   }
 
   _getCategory(categories) {
