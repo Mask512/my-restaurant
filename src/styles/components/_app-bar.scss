@@ -45,7 +45,10 @@ app-bar {
       &:hover,
       &:focus {
         color: variables.$clr-accent;
-        text-decoration: underline;
+      }
+
+      &:hover {
+        outline: none;
       }
     }
 

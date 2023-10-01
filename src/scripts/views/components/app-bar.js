@@ -10,7 +10,7 @@ class AppBar extends HTMLElement {
         <nav role="navigation" class="nav-container">
         <button aria-label="Tutup Menu Navigasi" class="menu-close material-icons">close</button>
           <ul class="nav-list">
-          <li class="nav-item"><a href="/" aria-current="page">Home</a></li>
+          <li class="nav-item"><a href="#/" aria-current="page">Home</a></li>
           <li class="nav-item"><a href="#/favorite">Favorite</a></li>
           <li class="nav-item"><a href="https://github.com/Mask512" target="_blank" rel="noopener noreferrer">About Us</a></li>
           </ul>

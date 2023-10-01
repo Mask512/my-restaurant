@@ -21,10 +21,9 @@ class App {
 
   _initMenu() {
     DrawerInitiator.init({
+      navContainer: this._navContainer,
       menuOpen: this._menuOpen,
       menuClose: this._menuClose,
-      navContainer: this._navContainer,
-      mainContent: this._mainContent,
     });
   }
 

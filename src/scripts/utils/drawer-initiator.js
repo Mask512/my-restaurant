@@ -3,17 +3,12 @@ const DrawerInitiator = {
     menuOpen,
     menuClose,
     navContainer,
-    mainContent,
   }) {
     menuOpen.addEventListener('click', (event) => {
       this._openDrawer(event, navContainer);
     });
 
     menuClose.addEventListener('click', (event) => {
-      this._closeDrawer(event, navContainer);
-    });
-
-    mainContent.addEventListener('click', (event) => {
       this._closeDrawer(event, navContainer);
     });
   },

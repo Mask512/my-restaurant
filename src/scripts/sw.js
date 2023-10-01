@@ -40,22 +40,3 @@ registerRoute(googleFonts);
 self.addEventListener('install', () => {
   console.log('ServiceWorker : installed');
 });
-
-// self.addEventListener('push', (event) => {
-//   console.log('ServiceWorker : pushed');
-//   const notificationData = {
-//     title: 'Push Notification',
-//     options: {
-//       body: 'This is a push notification',
-//       icon: './favicon.png',
-//       image: '/icon-512x512/icon-512x512.jpg',
-//     },
-//   };
-
-//   const showNotification = self.registration.showNotification(
-//     notificationData.title,
-//     notificationData.options,
-//   );
-
-//   event.waitUntil(showNotification);
-// });

@@ -1,56 +1,44 @@
 
 Fitur yang harus ada pada aplikasi:
 
-1.  **App Bar (Navigation Bar)**  
+1.  **Halaman Utama (Daftar Restoran)**  
     Syarat:
-    -   Menampilkan nama aplikasi atau brand logo dari aplikasi katalog restoran (tentukan sendiri nama aplikasi atau brand logonya).
-    -   Terdapat navigation menu:
-        -   Home → mengarah ke root domain.
-        -   Favorite → target URL cukup bernilai “#” (Sebagai placeholder untuk digunakan pada submission selanjutnya).
-        -   About Us → arahkan ke profil LinkedIn/Github/Social Media Anda, atau boleh juga ke personal web/blog.
-    -   Terdapat fitur navigation drawer yang berfungsi dengan baik bila diakses pada layar seluler.  
-          
-        
-2.  **Hero Element (Jumbotron Element)  
-    **Syarat:
-    -   Menampilkan hero element dengan gambar yang sudah ditentukan, silakan pilih salah satu aset yang disediakan di dalam starter proyek,  _src → public → images → hero_. Gambar yang tidak digunakan, bisa Anda hapus.
-    -   Gambar hero element yang ditampilkan haruslah  _full-width_ atau memenuhi persyaratan sebagai berikut.
-        -   Tampilkan minimal dengan width 1000px pada ukuran viewport width >= 1200px.
-        -   Jika ukuran viewport width < 1200px, hero element ditampilkan  _full-width._  
-              
-            
-3.  **Daftar Restoran**  
+    -   Menampilkan daftar restoran yang datanya bersumber dari API  [https://restaurant-api.dicoding.dev/](https://restaurant-api.dicoding.dev/). Silakan lihat dokumentasinya pada halaman tersebut.
+    -   Wajib menampilkan nama, gambar dan minimal salah satu diantara kota, rating, dan atau deskripsi pada restoran.
+    -   Terdapat tautan/CTA yang mengarah ke detail restoran pada tiap itemnya.
+    -   Hero elemen tetap dipertahankan.
+2.  **Halaman Detail Restoran**  
     Syarat:
-    -   Menampilkan daftar restoran berdasarkan data yang sudah disediakan di dalam project starter–lokasinya ada di src → public → data → DATA.json. Untuk menampilkannya dapat melalui cara hardcoded–dituliskan dalam HTML secara langsung–atau DOM manipulation menggunakan JavaScript.
-    -   Wajib menampilkan nama, gambar, dan minimal salah satu di antara kota, rating, dan/atau deskripsi pada restoran.  
-          
-        
-4.  **Footer**  
+    -   Menampilkan detail dari restoran yang dipilih dari halaman utama (daftar restoran) atau halaman favorit restoran.
+    -   Pada halaman detail restoran harus terdapat:
+        -   Nama restoran
+        -   Gambar
+        -   Alamat
+        -   Kota
+        -   Deskripsi
+        -   Menu Makanan
+        -   Menu Minuman
+        -   Customer Reviews
+    -   Terdapat tombol favorite untuk memasukkan atau menghapus restoran favorit dari database (gunakan IndexedDB).
+3.  **Halaman Daftar Restoran Favorit**  
     Syarat:
-    -   Terdapat footer yang ditampilkan di bawah halaman.
-    -   Terdapat konten teks bebas sesuai dengan kreatifitas Anda. Misalnya, konten hak cipta yang mencangkup tahun dan nama aplikasi. Contoh: “Copyright © 2020 - Hunger Apps”.  
-          
-        
-5.  **Responsibilitas Tampilan**  
+    -   Halaman Daftar Restoran dapat diakses melalui menu navigasi favorit.
+    -   Menampilkan restoran yang difavoritkan oleh pengguna (data diambil dari indexedDB).
+    -   Wajib menampilkan nama, gambar dan minimal salah satu diantara kota, rating, dan atau deskripsi pada restoran.
+    -   Terdapat tautan/CTA yang mengarah ke detail restoran pada tiap itemnya.
+4.  **Native Capability**  
     Syarat:
-    -   Tampilan web app harus responsif pada seluruh ukuran layar (mobile - tablet - desktop). Utamakan tampilan mobile terlebih dahulu.
-    -   Gunakan teknik Grid CSS atau Flexbox dalam menyusun layout. Bila terdapat float, submission Anda akan kami ditolak.
-    -   Menetapkan ukuran viewport secara dinamis berdasarkan layar device yang digunakan.  
-          
-        
-6.  **Aksesibilitas Website**  
+    -   Aplikasi dapat diakses dalam keadaan offline tanpa ada aset yang gagal dimuat, termasuk data yang didapatkan dari API. Anda bebas menggunakan strategi caching apapun, bahkan menggunakan workbox.
+    -   Aplikasi harus menampilkan icon Add to Home Screen.
+    -   Aplikasi memiliki custom icon yang ditampilkan pada home screen dan splash screen.
+5.  **Code Quality**  
     Syarat:
-    -   Seluruh fungsionalitas website dapat dilakukan dengan menggunakan keyboard. Contohnya mengakses tombol hamburger button, mengakses tautan yang ada, dan lain sebagainya.
-    -   Menerapkan teknik  _Skip to Content_  untuk melewati focus pada menu navigasi.
-    -   Terdapat alternative teks pada seluruh gambar yang ditampilkan. Bila ada gambar yang tidak memiliki arti apa pun, cukup berikan atribut  **alt**  dengan nilai kosong.
-    -   Dimensi  _touch target_  pada elemen yang diinteraksikan dengan  _touch_ harus memilliki ukuran elemen minimal 44x44px. Adapun beberapa contoh elemen tersebut meliputi button, anchor, input text, dan textarea.  
-        Pastikan juga terdapat jarak antar elemen tersebut supaya dimensi  _touch target_  tidak menumpuk.
-    -   Menggunakan  _semantic element_  dalam menyusun struktur dan landmarking HTML.
+    -   Menggunakan ESLint sebagai linter ketika menuliskan kode JavaScript.  _Harap lampirkan berkas konfigurasi ESLint ya_**.**
+    -   Menerapkan salah satu style guide baik itu  [Google JavaScript Code Style](https://google.github.io/styleguide/jsguide.html),  [AirBnB JavaScript Code Style](https://github.com/airbnb/javascript), atau  [StandardJS Code Style](https://standardjs.com/rules.html).
+    -   Periksa kembali sebelum mengirimkan submission, apakah project yang Anda kirimkan sesuai dengan kriteria yang ditetapkan atau tidak, ditandai dengan tidak adanya satupun  _error_  ketika menjalankan eslint.
+6.  **Pertahankan syarat yang ada pada submission sebelumnya**. Seperti responsibilitas tampilan, aksesibilitas pada website, appbar, footer dan sebagainya.
+Anda dapat menerapkan beberapa  **saran**  di bawah ini untuk mendapatkan nilai tinggi, berikut sarannya:
 
-**Perhatian**:
-
--   Dalam mengerjakan submission ini,  _Anda tidak diperkenankan_ menggunakan css framework (seperti Bootstrap, Materialize, Tailwind, dll) yang dapat membantu dalam menyusun tampilan yang responsif. Tuliskan kode CSS from scratch, sistem layouting CSS murni saat ini sudah cukup powerful untuk membuat tampilan website responsif.
-
-Berikut kerangka tampilan yang bisa Anda gunakan sebagai referensi.
-
-<img src="./wireframe.jpeg"  width="600">
+-   Tambahkan fitur untuk memberikan consumer review baru pada halaman detail. Silakan simak caranya pada  [dokumentasi API](https://restaurant-api.dicoding.dev/)  (Gunakan testing key untuk api key-nya).
+-   Alangkah baiknya bila Anda menerapkan Web Component secara native menggunakan Custom Element.
+-   Tambahkan indikator loading ketika data sedang dimuat dari server dan tampilkanlah keterangan/halaman bila request yang dilakukan gagal.
