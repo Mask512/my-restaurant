@@ -7,6 +7,9 @@ const skipInitiator = {
   },
   _skipTo(content) {
     content.setAttribute('tabindex', '-1');
+    content.scrollIntoView({
+      behavior: 'smooth',
+    });
     content.focus();
   },
 };

@@ -1,7 +1,6 @@
 import 'regenerator-runtime';
 import '../styles/main.scss';
 import './views/components/app-bar';
-import './views/components/hero-bar';
 import './views/components/footer-element';
 import App from './views/app';
 import swRegister from './utils/sw-register';
@@ -22,12 +21,12 @@ const app = new App({
 
 window.addEventListener('hashchange', () => {
   app.renderPage();
-  mainContent.scrollIntoView();
+  mainContent.scrollIntoView({ behavior: 'smooth' });
   skipInitiator.init(skipButton, 'main-content');
 });
 
 window.addEventListener('load', () => {
   app.renderPage();
+  skipInitiator.init(skipButton, 'main-content');
   swRegister();
-  mainContent.scrollIntoView();
 });

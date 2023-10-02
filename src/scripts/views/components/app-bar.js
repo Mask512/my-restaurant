@@ -1,3 +1,5 @@
+import './hero-bar';
+
 class AppBar extends HTMLElement {
   connectedCallback() {
     this.render();

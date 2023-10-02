@@ -6,6 +6,17 @@
   flex-direction: column;
   gap: variables.$gap-half;
   color: variables.$clr-primary;
+
+  img {
+    transition: transform .3s;
+  }
+
+  &:hover,
+  &:focus {
+    img {
+      transform: scale(1.2);
+    }
+  }
 }
 
 .restaurant-image-wrapper {
@@ -51,10 +62,14 @@
   background-color: variables.$clr-primary;
   color: variables.$clr-accent;
   text-align: center;
+  transition: .3s;
 
   &:hover,
   &:focus {
+    font-weight: 800;
+    text-decoration: underline;
     color: white;
     outline: none;
+    background-color: lighten($color: variables.$clr-primary, $amount: 10);
   }
 }
