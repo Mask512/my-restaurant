@@ -25,7 +25,7 @@ class FavoriteButton extends HTMLElement {
   async _renderButton() {
     const { id } = this.data;
     if (await this._isRestoExist(id)) {
-      this._renderLikedButton();
+      this._renderUnlikeButton();
     } else {
       this._renderLikeButton();
     }
@@ -41,14 +41,14 @@ class FavoriteButton extends HTMLElement {
     this._addLikeButtonListener();
   }
 
-  _renderLikedButton() {
+  _renderUnlikeButton() {
     this.innerHTML = `
-      <button aria-label="Add Resto to Favorites" id="likeButton" class="like">
+      <button aria-label="Remove resto from Favorites" id="likeButton" class="like">
           <i class="material-icons">bookmark_added</i> Remove from Favorites
       </button>
     `;
 
-    this._addLikedButtonListener();
+    this._addUnlikeButtonListener();
   }
 
   _addLikeButtonListener() {
@@ -59,7 +59,7 @@ class FavoriteButton extends HTMLElement {
     });
   }
 
-  _addLikedButtonListener() {
+  _addUnlikeButtonListener() {
     const likeButton = this.querySelector('#likeButton');
     likeButton.addEventListener('click', async () => {
       await FavoriteRestoIDB.deleteResto(this.data.id);

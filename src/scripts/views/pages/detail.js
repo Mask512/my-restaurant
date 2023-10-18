@@ -27,13 +27,12 @@ const Detail = {
         const contentContainer = document.querySelector('.content-container');
         restaurantDetail.data = restaurant;
         contentContainer.append(restaurantDetail);
-        loading.remove();
       }
     } catch (error) {
       title.textContent = 'Something Error';
       showAlertError(error);
-      loading.remove();
     }
+    loading.remove();
   },
 };
 
