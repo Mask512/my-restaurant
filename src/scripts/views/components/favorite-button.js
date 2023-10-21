@@ -1,6 +1,8 @@
 import FavoriteRestoIDB from '../../data/favorite-resto';
 
 class FavoriteButton extends HTMLElement {
+  _favoriteResto = FavoriteRestoIDB;
+
   connectedCallback() {
     this._renderLoading();
   }
@@ -54,7 +56,7 @@ class FavoriteButton extends HTMLElement {
   _addLikeButtonListener() {
     const likeButton = this.querySelector('#likeButton');
     likeButton.addEventListener('click', async () => {
-      await FavoriteRestoIDB.putResto(this.data);
+      await this._favoriteResto.putResto(this.data);
       this._renderButton();
     });
   }
@@ -62,13 +64,13 @@ class FavoriteButton extends HTMLElement {
   _addUnlikeButtonListener() {
     const likeButton = this.querySelector('#likeButton');
     likeButton.addEventListener('click', async () => {
-      await FavoriteRestoIDB.deleteResto(this.data.id);
+      await this._favoriteResto.deleteResto(this.data.id);
       this._renderButton();
     });
   }
 
   async _isRestoExist(id) {
-    const resto = await FavoriteRestoIDB.getResto(id);
+    const resto = await this._favoriteResto.getResto(id);
     return !!resto;
   }
 }
