@@ -15,9 +15,9 @@ const createReviewCard = (customerReview) => {
   const { name, review, date } = customerReview;
   return `
   <article class="review-card">
-    <blockquote class="text-bold text-italic">${review}</blockquote>
+    <blockquote class="text-bold text-italic review-message">${review}</blockquote>
     <div class="review-card-data">
-        <cite class="text-bold">${name}</cite>
+        <cite class="text-bold reviewer-name">${name}</cite>
         <time class="text-italic">${date}</time>
     </div>
   </article>

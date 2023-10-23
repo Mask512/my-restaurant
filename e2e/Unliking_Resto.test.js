@@ -3,18 +3,20 @@ const resto = require('./helpers/restoElements');
 Feature('Unliking Resto');
 
 // Adding the number of restaurants to be liked
-const likeRestoItems = async (I, numberOfItems) => {
+const likingResto = async (I, numberOfItems) => {
   I.amOnPage('/');
   I.seeElement(resto.listElement);
   I.seeElement(resto.itemElement);
-  const visibleLikedResto = await I.grabNumberOfVisibleElements(
+  const availableResto = await I.grabNumberOfVisibleElements(
     resto.itemElement,
   );
 
-  if (numberOfItems > visibleLikedResto) {
+  if (numberOfItems > availableResto) {
     // eslint-disable-next-line no-param-reassign
-    numberOfItems = visibleLikedResto;
-    console.log(`The number of items: ${numberOfItems} is adjusted to ${visibleLikedResto} because the specified quantity exceeds the available visible items.`);
+    numberOfItems = availableResto;
+    console.log(
+      `The number of items: ${numberOfItems} is adjusted to ${availableResto} because the specified quantity exceeds the available visible items.`,
+    );
   }
 
   for (let i = 1; i <= numberOfItems; i++) {
@@ -25,7 +27,8 @@ const likeRestoItems = async (I, numberOfItems) => {
     I.click(restoButtonDetail);
 
     I.seeElement('#likeButton');
-    I.click('#likeButton');
+    I.see('Add to Favorites');
+    I.click('Add to Favorites', '#likeButton');
 
     I.amOnPage('/');
     I.seeElement(resto.listElement);
@@ -36,7 +39,7 @@ const likeRestoItems = async (I, numberOfItems) => {
 Feature('Unliking Resto');
 
 Before(({ I }) => {
-  likeRestoItems(I, 22);
+  likingResto(I, 2);
 });
 
 Scenario('showing liked restaurant', ({ I }) => {
@@ -45,7 +48,7 @@ Scenario('showing liked restaurant', ({ I }) => {
   I.seeElement(resto.itemElement);
 });
 
-Scenario('Unliking one or more restaurant', async ({ I }) => {
+Scenario('Unliking one and or more restaurant', async ({ I }) => {
   I.amOnPage('/#/favorite');
 
   I.seeElement(resto.itemElement);
