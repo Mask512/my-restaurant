@@ -5,6 +5,8 @@ import './views/components/footer-element';
 import App from './views/app';
 import swRegister from './utils/sw-register';
 import skipInitiator from './utils/skip-link-initiator';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 const menuOpen = document.querySelector('.menu-open');
 const menuClose = document.querySelector('.menu-close');

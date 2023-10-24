@@ -21,14 +21,19 @@ class RestaurantItem extends HTMLElement {
     this.innerHTML = `
     <article tabIndex="0" class="restaurant-info card" id="${id}">
       <div class="restaurant-image-wrapper">
-        <picture class="restaurant-image">
-          <source
-            srcset="${CONFIG.BASE_IMAGE_URL}small/${pictureId}"
-            media="(max-width: 801px)"
-          />
-          <img src="${CONFIG.BASE_IMAGE_URL}medium/${pictureId}" loading="lazy"
-          alt="Photo of ${name}">
-        </picture>
+      <picture class="restaurant-image">
+      <source
+        data-srcset="${CONFIG.BASE_IMAGE_URL}medium/${pictureId}"
+        media="(max-width: 575px)"
+        class="lazyload"
+      />
+      <img
+        src="/images/restaurant-placeholder.svg"
+        data-src="${CONFIG.BASE_IMAGE_URL}small/${pictureId}"
+        alt="Photo of ${name}"
+        class="lazyload"
+      />
+    </picture>
       </div>
       <div class="restaurant-details">
         <p class="text-bold">Ratings : ${rating}</p>

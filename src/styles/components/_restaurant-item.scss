@@ -27,6 +27,8 @@
 
 .restaurant-image img{
   width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
   cursor: pointer;
   transition: transform 0.5s;
   object-fit: cover;

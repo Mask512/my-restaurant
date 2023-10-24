@@ -36,8 +36,8 @@ class RestaurantDetail extends HTMLElement {
     <article tabIndex="0" class="restaurant-detail" id="${id}">
         <div class="detail-image-wrapper">
             <picture>
-                <source srcset="${CONFIG.BASE_IMAGE_URL}small/${pictureId}" media="(max-width: 801px)"/>
-                <img src="${CONFIG.BASE_IMAGE_URL}medium/${pictureId}" loading="lazy"
+                <source data-srcset="${CONFIG.BASE_IMAGE_URL}small/${pictureId}" media="(max-width: 801px)" class="lazyload"/>
+                <img src="/images/restaurant-placeholder.svg" data-src="${CONFIG.BASE_IMAGE_URL}medium/${pictureId}" class="lazyload"
                 alt="Photo of ${name}">
             </picture>
             <p class="text-bold detail-rating">Ratings : ${rating}</p>

@@ -30,6 +30,7 @@ const googleFonts = new Route(
   ({ url }) => url.href.startsWith('https://fonts.gstatic.com/s/'),
   new CacheFirst({
     cacheName: 'fonts',
+    plugins: [cacheExpiration],
   }),
 );
 

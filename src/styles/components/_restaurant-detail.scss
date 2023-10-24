@@ -10,6 +10,7 @@
     border: 5px solid variables.$clr-primary;
     overflow: hidden;
     border-radius: 5px;
+    aspect-ratio: 16 / 9;
 
     img {
       width: 100%;
@@ -55,6 +56,10 @@
 
   @media screen and (min-width: variables.$medium-screen) {
     grid-template-columns: 1fr 1fr;
+
+    .detail-image-wrapper {
+      aspect-ratio: unset;
+    }
 
     .detail-rating {
       top: 1em;
