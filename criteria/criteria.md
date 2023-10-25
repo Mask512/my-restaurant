@@ -1,44 +1,39 @@
+Submission: Katalog Restoran PWA + Testing and Optimized
+
+**Kriteria**
 
 Fitur yang harus ada pada aplikasi:
 
-1.  **Halaman Utama (Daftar Restoran)**  
+1.  **Integration Test**  
     Syarat:
-    -   Menampilkan daftar restoran yang datanya bersumber dari API  [https://restaurant-api.dicoding.dev/](https://restaurant-api.dicoding.dev/). Silakan lihat dokumentasinya pada halaman tersebut.
-    -   Wajib menampilkan nama, gambar dan minimal salah satu diantara kota, rating, dan atau deskripsi pada restoran.
-    -   Terdapat tautan/CTA yang mengarah ke detail restoran pada tiap itemnya.
-    -   Hero elemen tetap dipertahankan.
-2.  **Halaman Detail Restoran**  
+    -   Menerapkan integration test untuk fungsi menyukai dan batal menyukai restoran.
+2.  **End to End Test**  
     Syarat:
-    -   Menampilkan detail dari restoran yang dipilih dari halaman utama (daftar restoran) atau halaman favorit restoran.
-    -   Pada halaman detail restoran harus terdapat:
-        -   Nama restoran
-        -   Gambar
-        -   Alamat
-        -   Kota
-        -   Deskripsi
-        -   Menu Makanan
-        -   Menu Minuman
-        -   Customer Reviews
-    -   Terdapat tombol favorite untuk memasukkan atau menghapus restoran favorit dari database (gunakan IndexedDB).
-3.  **Halaman Daftar Restoran Favorit**  
+    -   Menerapkan End to End Test dengan skenario:
+        -   Menyukai salah satu restoran.
+        -   Batal menyukai restoran tersebut.
+3.  **Image Optimization**  
     Syarat:
-    -   Halaman Daftar Restoran dapat diakses melalui menu navigasi favorit.
-    -   Menampilkan restoran yang difavoritkan oleh pengguna (data diambil dari indexedDB).
-    -   Wajib menampilkan nama, gambar dan minimal salah satu diantara kota, rating, dan atau deskripsi pada restoran.
-    -   Terdapat tautan/CTA yang mengarah ke detail restoran pada tiap itemnya.
-4.  **Native Capability**  
+    1.  Melakukan kompresi terhadap gambar hero yang digunakan. Ukuran gambar harus di bawah  _200kb_.
+    2.  Menerapkan teknik image responsive pada gambar hero. Resolusi gambar pada layar seluler dan desktop harus berbeda.
+    3.  Menerapkan teknik lazy loading pada gambar daftar restoran yang ditampilkan.
+4.  **Bundle Optimization**  
     Syarat:
-    -   Aplikasi dapat diakses dalam keadaan offline tanpa ada aset yang gagal dimuat, termasuk data yang didapatkan dari API. Anda bebas menggunakan strategi caching apapun, bahkan menggunakan workbox.
-    -   Aplikasi harus menampilkan icon Add to Home Screen.
-    -   Aplikasi memiliki custom icon yang ditampilkan pada home screen dan splash screen.
-5.  **Code Quality**  
-    Syarat:
-    -   Menggunakan ESLint sebagai linter ketika menuliskan kode JavaScript.  _Harap lampirkan berkas konfigurasi ESLint ya_**.**
-    -   Menerapkan salah satu style guide baik itu  [Google JavaScript Code Style](https://google.github.io/styleguide/jsguide.html),  [AirBnB JavaScript Code Style](https://github.com/airbnb/javascript), atau  [StandardJS Code Style](https://standardjs.com/rules.html).
-    -   Periksa kembali sebelum mengirimkan submission, apakah project yang Anda kirimkan sesuai dengan kriteria yang ditetapkan atau tidak, ditandai dengan tidak adanya satupun  _error_  ketika menjalankan eslint.
-6.  **Pertahankan syarat yang ada pada submission sebelumnya**. Seperti responsibilitas tampilan, aksesibilitas pada website, appbar, footer dan sebagainya.
+    1.  Memasang bundle analyzer pada proyek submission.
+    2.  Gunakan teknik Code Splitting untuk memisahkan vendor code dari kode asli yang Anda tuliskan.
+5.  **Pertahankan syarat yang ada pada submission sebelumnya.** Seperti penerapan PWA, responsibilitas tampilan, aksesibilitas pada website dan sebagainya.
+
+**Penilaian**
+
+Submission Anda akan dinilai oleh reviewer dengan  **skala 1-5**  berdasarkan dari parameter yang ada.
+
 Anda dapat menerapkan beberapa  **saran**  di bawah ini untuk mendapatkan nilai tinggi, berikut sarannya:
 
--   Tambahkan fitur untuk memberikan consumer review baru pada halaman detail. Silakan simak caranya pada  [dokumentasi API](https://restaurant-api.dicoding.dev/)  (Gunakan testing key untuk api key-nya).
--   Alangkah baiknya bila Anda menerapkan Web Component secara native menggunakan Custom Element.
--   Tambahkan indikator loading ketika data sedang dimuat dari server dan tampilkanlah keterangan/halaman bila request yang dilakukan gagal.
+-   Menuliskan test case secara lengkap, mulai dari kasus positif hingga kasus negatif. Pastikan test case yang dijalankan berhasil.
+-   Menerapkan End to End test pada skenario lain di luar yang sudah ditentukan. Pastikan test case yang dijalankan berhasil.  
+    Contoh: bila aplikasi terdapat fitur customer review, lakukan End to End test pada fitur tersebut.
+-   Menerapkan optimasi lain di luar dari optimasi yang menjadi persyaratan. Contoh, Anda bisa menerapkan pendekatan skeleton UI, minify/uglify CSS.
+-   Mendeploy hasil web app yang Anda kerjakan ke  _third-party hosting._  Seperti [_Firebase Hosting_](https://firebase.google.com/docs/hosting)_,  [Netlify](https://www.netlify.com/),  [Heroku](https://www.heroku.com/),_ [_Github Pages_](https://pages.github.com/), atau yang lainnya. Serta, memperhatikan metrik Web Vitals dengan nilai:
+    -   **FCP** < 2.5 detik
+    -   **FID**/**TBT** < 100 ms
+    -   **CLS** < 0.1

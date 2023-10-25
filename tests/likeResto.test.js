@@ -2,7 +2,7 @@ import { addButtonComponent, addButtonComponentWithRestoData } from './helpers/t
 import FavoriteRestoIDB from '../src/scripts/data/favorite-resto';
 
 describe('Liking A Resto', () => {
-  it('should show the loading before render button', async () => {
+  it('should show the loading before render button', () => {
     addButtonComponent();
     expect(document.querySelector('.loading')).toBeTruthy();
   });

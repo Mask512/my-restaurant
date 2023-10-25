@@ -2,6 +2,7 @@ import CONFIG from '../../global/config';
 import { createReviewCard } from '../templates/template-creator';
 import './form-review';
 import './favorite-button';
+import placeholderImage from '../../../public/images/restaurant-placeholder.svg';
 
 class RestaurantDetail extends HTMLElement {
   set data(restaurant) {
@@ -37,7 +38,7 @@ class RestaurantDetail extends HTMLElement {
         <div class="detail-image-wrapper">
             <picture>
                 <source data-srcset="${CONFIG.BASE_IMAGE_URL}small/${pictureId}" media="(max-width: 801px)" class="lazyload"/>
-                <img src="/images/restaurant-placeholder.svg" data-src="${CONFIG.BASE_IMAGE_URL}medium/${pictureId}" class="lazyload"
+                <img src="${placeholderImage}" data-src="${CONFIG.BASE_IMAGE_URL}medium/${pictureId}" class="lazyload"
                 alt="Photo of ${name}">
             </picture>
             <p class="text-bold detail-rating">Ratings : ${rating}</p>

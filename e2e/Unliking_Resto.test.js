@@ -39,7 +39,7 @@ const likingResto = async (I, numberOfItems) => {
 Feature('Unliking Resto');
 
 Before(({ I }) => {
-  likingResto(I, 2);
+  likingResto(I, 2); // set number of restaurant to be liked for testing
 });
 
 Scenario('showing liked restaurant', ({ I }) => {

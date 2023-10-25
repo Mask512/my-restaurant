@@ -20,7 +20,7 @@ Scenario('Liking one restaurant', async ({ I }) => {
   I.seeElement(resto.listElement);
   I.seeElement(resto.itemElement);
 
-  const firstResto = await locate(resto.itemElement).first();
+  const firstResto = locate(resto.itemElement).first();
   const firstRestoName = await I.grabTextFrom(locate(firstResto).find(resto.nameElement));
   const firstRestoButtonDetail = locate(firstResto).find('.btn-detail');
 

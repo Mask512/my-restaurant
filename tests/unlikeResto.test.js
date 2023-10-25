@@ -13,13 +13,13 @@ describe('Unliking A Resto', () => {
     await FavoriteRestoIDB.deleteResto(1);
   });
 
-  it('should display unlike button when the resto has been favorited', async () => {
+  it('should display unlike button when the resto has been favorited', () => {
     expect(
       document.querySelector('[aria-label="Remove resto from Favorites"]'),
     ).toBeTruthy();
   });
 
-  it('should not display unlike button when the resto has been favorited', async () => {
+  it('should not display unlike button when the resto has been favorited', () => {
     expect(
       document.querySelector('[aria-label="Add Resto to Favorites"]'),
     ).toBeFalsy();
