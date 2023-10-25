@@ -2,6 +2,7 @@ const common = require('./webpack.common');
 const { merge } = require('webpack-merge');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 module.exports = merge(common, {
   mode: 'production',
@@ -19,10 +20,22 @@ module.exports = merge(common, {
           },
         ],
       },
+      {
+        test: /\.(jpe?g|png)$/i,
+        type: "asset",
+      },
     ],
   },
   optimization: {
-    minimizer: [`...`, new CssMinimizerPlugin()],
+    minimizer: [
+      `...`,
+      new CssMinimizerPlugin(),
+      new ImageMinimizerPlugin({
+        minimizer: {
+          implementation: ImageMinimizerPlugin.squooshMinify,
+        },
+      }),
+    ],
   },
   plugins: [
     new MiniCssExtractPlugin({
