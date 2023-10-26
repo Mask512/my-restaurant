@@ -2,7 +2,7 @@ import CONFIG from '../../global/config';
 import { createReviewCard } from '../templates/template-creator';
 import './form-review';
 import './favorite-button';
-import placeholderImage from '../../../public/images/restaurant-placeholder.svg';
+import placeholderImage from '../../../assets/images/restaurant-placeholder.svg';
 
 class RestaurantDetail extends HTMLElement {
   set data(restaurant) {

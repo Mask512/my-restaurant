@@ -2,7 +2,7 @@
 
 hero-bar {
   background-image: linear-gradient(rgba(0, 66, 37, 0.2), rgba(0, 66, 37, 0.1)),
-    url('../public/images/heros/hero-image-min-small.jpg');
+    url('../assets/images/hero/hero-image-min-small.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -21,6 +21,6 @@ hero-bar {
 
   @media screen and (min-width: variables.$medium-screen) {
     background-image: linear-gradient(rgba(0, 66, 37, 0.2), rgba(0, 66, 37, 0.1)),
-    url('../public/images/heros/hero-image-min.jpg');
+    url('../assets/images/hero/hero-image-min.jpg');
   }
 }

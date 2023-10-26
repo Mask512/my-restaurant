@@ -21,7 +21,7 @@ module.exports = merge(common, {
         ],
       },
       {
-        test: /\.(jpe?g|png)$/i,
+        test: /\.(jpe?g|png|gif|svg)$/i,
         type: "asset",
       },
     ],
@@ -32,7 +32,7 @@ module.exports = merge(common, {
       new CssMinimizerPlugin(),
       new ImageMinimizerPlugin({
         minimizer: {
-          implementation: ImageMinimizerPlugin.squooshMinify,
+          implementation: ImageMinimizerPlugin.sharpMinify,
         },
       }),
     ],
