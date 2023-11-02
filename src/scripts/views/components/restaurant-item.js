@@ -1,4 +1,5 @@
 import CONFIG from '../../global/config';
+import placeholderImage from '../../../assets/images/restaurant-placeholder.svg';
 
 class RestaurantItem extends HTMLElement {
   set restaurant(data) {
@@ -28,7 +29,7 @@ class RestaurantItem extends HTMLElement {
         class="lazyload"
       />
       <img
-        src="/images/restaurant-placeholder.svg"
+        src="${placeholderImage}"
         data-src="${CONFIG.BASE_IMAGE_URL}small/${pictureId}"
         alt="Photo of ${name}"
         class="lazyload"
