@@ -5,7 +5,7 @@ class FooterElement extends HTMLElement {
 
   render() {
     this.innerHTML = `
-        <p>copyrights &copy; 2023 - My Restaurant</p>
+        <p>copyrights &copy; 2024 - My Restaurant | mask512</p>
 `;
   }
 }
